@@ -18,7 +18,6 @@ Pod::Spec.new do |s|
   s.dependency 'SDWebImage'
   s.dependency 'JSONModel'
   s.dependency 'JSQMessagesViewController'
-  s.dependency 'SocketRocket'
   s.vendored_frameworks = 'FeedbackLoop.framework'
   s.requires_arc = true
   s.frameworks = ["Foundation", "UIKit"]
