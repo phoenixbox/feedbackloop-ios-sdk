@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
                   Support your customers with the tool your team knows and loves. Slack
                    DESC
   s.homepage     = "https://github.com/phoenixbox/feedbackloop-ios-sdk"
-  s.license      = "Apache License, Version 2.0"
+  s.license             = { :type => "Apache license", :file => "LICENSE" }
   s.author             = "Shane Rogers"
   s.platform   = :ios, '7.0'
   s.source              = { :git => 'https://github.com/phoenixbox/feedbackloop-ios-sdk.git', :tag => s.version.to_s }
