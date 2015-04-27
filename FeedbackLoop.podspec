@@ -13,7 +13,6 @@ Pod::Spec.new do |s|
   s.preserve_paths      = 'FeedbackLoop.framework'
   s.public_header_files = 'FeedbackLoop.framework/Versions/A/Headers/FeedbackLoop.h'
   s.dependency 'AFNetworking'
-  s.dependency 'AFBlurSegue'
   s.dependency 'ObjectiveSugar'
   s.dependency 'SDWebImage'
   s.dependency 'JSONModel'
