@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license      = "Apache License, Version 2.0"
   s.author             = "Shane Rogers"
   s.platform   = :ios, '7.0'
-  s.source              = { :git => 'https://github.com/phoenixbox/feedbackloop-ios-sdk', :tag => s.version.to_s }
+  s.source              = { :git => 'https://github.com/phoenixbox/feedbackloop-ios-sdk.git', :tag => s.version.to_s }
   s.preserve_paths      = 'FeedbackLoop.framework'
   s.public_header_files = 'FeedbackLoop.framework/Versions/A/Headers/FeedbackLoop.h'
   s.vendored_frameworks = 'FeedbackLoop.framework'
