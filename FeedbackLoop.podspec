@@ -13,15 +13,12 @@ Pod::Spec.new do |s|
   s.preserve_paths      = 'FeedbackLoop.framework'
   s.public_header_files = 'FeedbackLoop.framework/Versions/A/Headers/FeedbackLoop.h'
   s.dependency 'AFNetworking'
-  s.dependency 'AFBlurSegue'
-  s.dependency 'ObjectiveSugar'
-  s.dependency 'SDWebImage'
   s.dependency 'JSONModel'
   s.dependency 'JSQMessagesViewController'
   s.dependency 'SocketRocket'
   s.vendored_frameworks = 'FeedbackLoop.framework'
   s.requires_arc = true
-  s.frameworks = ["Foundation", "UIKit"]
+  s.frameworks = ["Foundation", "UIKit", "Security", "SystemConfiguration", "MobileCoreServices", "ImageIO", "AVFoundation", "QuartzCore", "CoreGraphics"]
   s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$(inherited)' }
   s.resource = 'FeedbackLoop.bundle'
 end
