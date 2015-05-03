@@ -1,6 +1,6 @@
 ![FeedbackLoop](/../screenshots/images/github_title.png?raw=true "FeedbackLoop")
 ## Requirements
-The FeedbackLoop iOS SDK supports iOS 7.x and iOS 8.x.
+The FeedbackLoop iOS SDK supports iOS iOS 8.x.
 
 ## Installation
 
@@ -17,33 +17,29 @@ Add the FeedbackLoop pod into your Podfile and run a `pod install` or `pod updat
 
 3. Import FeedbackLoop using the following `#import <FeedbackLoop/FeedbackLoop.h>` statement.
 
-If you get errors, check out our FeedbackLoop [Troubleshooting section here](http://getfeedbackloop.com/documentation/ios).
-
 ##How should I use the FeedbackLoop SDK in my app?
 
-Each customer will get their own Slack channel based on their personal infor. Simply present the FeedbackLoop channel UI, and the user will be automatically added to their own channel in Slack.
+* Import `<FeedbackLoop/FeedbackLoop.h>` where necessary
+* Initialize FeedbackLoop in your `AppDelegate`
 
-`[FeedbackLoop presentChatChannel]`
-
-
-### Initialize FeedbackLoop
-Initialize FeedbackLoop by calling the following in your application delegate:
-
+```
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 			// Initialize FeedbackLoop
-    	[FeedbackLoop setSlackApiKey:@"<#ios_sdk-...#>" forAppId:@"<#your-app-id#>"];
+    	[FeedbackLoop initWithAppId:@"<#your-app-id#>"];
 	}
+```
 
-### Present the FeedbackLoop chat interface?
+* Register your current user's email
+	* `[]FeedbackLoop registerUserWithEmail:@"<#current-user-email#>"]`
+* Trigger the chat view presentation where ever you like
+	*  `[FeedbackLoop presentChatChannel]`
 
-FeedbackLoop lets your users send messages directly to you support staff in Slack.
 
-When you want the user to see their chat window, simply call:
+##How it works
+When you register your current user's email, that will be used to create a channel in your Slack.
 
-`[FeedbackLoop presentChatChannel]`
+Emails are unique, so each customer gets their own Slack channel which you can use to respond to them in real-time.
 
-If you want the user to see their conversation list, call:
-
-`[FeedbackLoop presentConversationList]`
+Simply present the FeedbackLoop channel UI, and the user will be automatically added to their own channel in Slack.
 
 Easy-peasy.
