@@ -1,3 +1,4 @@
+![FeedbackLoop](/../screenshots/images/github_title.png?raw=true "FeedbackLoop")
 ## Requirements
 The FeedbackLoop iOS SDK supports iOS 7.x and iOS 8.x.
 
