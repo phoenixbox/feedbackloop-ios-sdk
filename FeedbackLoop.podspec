@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "FeedbackLoop"
-  s.version      = "0.1.53"
+  s.version      = "0.1.54"
   s.summary      = "Customer support through Slack"
   s.description  = <<-DESC
                   Support your customers with the tool your team knows and loves. Slack
