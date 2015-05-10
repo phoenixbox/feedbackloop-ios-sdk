@@ -29,17 +29,23 @@ Add the FeedbackLoop pod into your Podfile and run a `pod install` or `pod updat
 	}
 ```
 
+#### Authenticated Users
 * Register your current user's email
-	* `[]FeedbackLoop registerUserWithEmail:@"<#current-user-email#>"]`
+	* `[FeedbackLoop registerUserWithEmail:@"<#current-user-email#>"]`
+
+#### Un-Authenticated Users
+We provide an email input UI for them to provide their email
+
+#### Presenting the chat UI
 * Trigger the chat view presentation where ever you like
 	*  `[FeedbackLoop presentChatChannel]`
 
 
 ##How it works
-When you register your current user's email, that will be used to create a channel in your Slack.
+When you register your current user's email, or they provide a valid email address through the UI, that email will be used to create a channel for them in your Slack.
 
 Emails are unique, so each customer gets their own Slack channel which you can use to respond to them in real-time.
 
-Simply present the FeedbackLoop channel UI, and the user will be automatically added to their own channel in Slack.
+Simply present the FeedbackLoop channel UI, and get chatting.
 
 Easy-peasy.
