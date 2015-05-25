@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "FeedbackLoop"
-  s.version      = "0.1.58"
+  s.version      = "0.1.59"
   s.summary      = "Customer support through Slack"
   s.description  = <<-DESC
                   Support your customers with the tool your team knows and loves. Slack
@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
   s.dependency 'JSQMessagesViewController'
   s.dependency 'SocketRocket'
   s.dependency 'MBProgressHUD'
+  s.dependency 'URBMediaFocusViewController'
   s.vendored_frameworks = 'FeedbackLoop.framework'
   s.requires_arc = true
   s.frameworks = ["Foundation", "UIKit", "Security", "SystemConfiguration", "MobileCoreServices", "ImageIO", "AVFoundation", "QuartzCore", "CoreGraphics"]
