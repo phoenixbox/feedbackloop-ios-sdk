@@ -9,11 +9,9 @@
 
 @interface FeedbackLoop : NSObject
 
-+ (void)initWithSlackToken:(NSString *)slackToken;
++ (void)registerAuthenticatedUser:(NSDictionary *)user;
 
-+ (void)setApiKey:(NSString *)apiKey forAppId:(NSString *)appId;
-
-+ (void)registerUserWithEmail:(NSString *)userEmail;
++ (void)registerUnauthenticatedUser:(NSDictionary *)user;
 
 + (void)initWithAppId:(NSString *)appId;
 
