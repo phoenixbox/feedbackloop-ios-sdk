@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = "FeedbackLoop"
-  s.version      = "0.1.6"
+  s.version      = "0.1.61"
   s.summary      = "Customer support through Slack"
   s.description  = <<-DESC
-                  Support your customers with the tool your team knows and loves. Slack
+                  Customer support through Slack. Support your customers with the tool your team knows and loves. Slack
                    DESC
   s.homepage     = "https://github.com/phoenixbox/feedbackloop-ios-sdk"
   s.license             = { :type => "Apache license", :file => "LICENSE" }
