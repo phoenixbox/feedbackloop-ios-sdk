@@ -1,6 +1,6 @@
 ![FeedbackLoop](/../screenshots/images/github_title.png?raw=true "FeedbackLoop")
 ## Requirements
-The FeedbackLoop iOS SDK supports iOS iOS 8.x.
+The FeedbackLoop iOS SDK supports iOS iOS 7.x.
 
 ## Installation
 
@@ -20,7 +20,7 @@ Add the FeedbackLoop pod into your Podfile and run a `pod install` or `pod updat
 ##How should I use the FeedbackLoop SDK in my app?
 
 * Import `<FeedbackLoop/FeedbackLoop.h>` where necessary
-* Initialize FeedbackLoop in your `AppDelegate`
+* Initialize the lib in your AppDelegate.m using your FeedbackLoop AppId
 
 ```
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -29,23 +29,26 @@ Add the FeedbackLoop pod into your Podfile and run a `pod install` or `pod updat
 	}
 ```
 
-#### Authenticated Users
-* Register your current user's email
-	* `[FeedbackLoop registerUserWithEmail:@"<#current-user-email#>"]`
+* Build a dictionary with relevant user data
+* Register this user with the FeedbackLoop lib
+* Present the chat channel
 
-#### Un-Authenticated Users
-We provide an email input UI for them to provide their email
+```
+NSDictionary *user = @{
+  @"email": @"<%= current_user.email %>",
+  @"user_name": @"<%= current_user.name %>",
+  @"user_link": @"http://www.yourwebsitehere.com/users/user_id",
+  @"created_at": @"<%= current_user.created_at.to_i %>",
+  @"links": @{ // Any metadata you want to include about the user
+		@"model": [UIDevice currentDevice].model
+  }
+};
 
-#### Presenting the chat UI
-* Trigger the chat view presentation where ever you like
-	*  `[FeedbackLoop presentChatChannel]`
+// Pass the user to the register method
+[FeedbackLoop registerAuthenticatedUser:user];
 
-
-##How it works
-When you register your current user's email, or they provide a valid email address through the UI, that email will be used to create a channel for them in your Slack.
-
-Emails are unique, so each customer gets their own Slack channel which you can use to respond to them in real-time.
-
-Simply present the FeedbackLoop channel UI, and get chatting.
+// Present the chat channel
+[FeedbackLoop presentChatChannel];
+```
 
 Easy-peasy.
